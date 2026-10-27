@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Suscriptores de YouTube</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">PANEL DE CONTROL</p>
+      <h1>Suscriptores de YouTube</h1>
+      <p class="muted">Controla tus canales y su evolución.</p>
+    </div>
+    <a class="button primary" href="ranking.html">🏆 Ver ranking</a>
+  </header>
+
+  <main class="container">
+    <section class="stats">
+      <article class="stat-card"><span>Canales registrados</span><strong id="channel-count">0</strong></article>
+      <article class="stat-card"><span>Total de suscriptores visibles</span><strong id="subscriber-total">0</strong></article>
+      <article class="stat-card"><span>Última actualización</span><strong id="last-updated">Sin datos</strong></article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-heading">
+        <div>
+          <h2>Mis canales</h2>
+          <p class="muted">Agrega un canal usando su nombre, ID o URL y actualiza el conteo manualmente.</p>
+        </div>
+      </div>
+
+      <form id="add-form" class="add-form">
+        <label>Nombre del canal<input id="channel-name" required placeholder="Ej. Mi canal"></label>
+        <label>URL o ID del canal<input id="channel-url" placeholder="https://youtube.com/@canal"></label>
+        <label>Suscriptores actuales<input id="channel-subs" type="number" min="0" step="1" required placeholder="12500"></label>
+        <button class="button primary" type="submit">＋ Agregar canal</button>
+      </form>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Canal</th><th>Suscriptores</th><th>Variación</th><th>Última consulta</th><th>Acciones</th></tr></thead>
+          <tbody id="channels-body"></tbody>
+        </table>
+      </div>
+      <p id="empty-state" class="empty">Todavía no hay canales. Agrega el primero con el formulario de arriba.</p>
+      <p class="notice">Esta versión guarda los datos en el navegador de este dispositivo. No obtiene cifras automáticamente de YouTube ni sincroniza datos entre dispositivos.</p>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

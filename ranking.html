@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ranking de suscriptores</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">CLASIFICACIÓN</p>
+      <h1>🏆 Ranking de canales</h1>
+      <p class="muted">Ordenados de mayor a menor número de suscriptores.</p>
+    </div>
+    <a class="button secondary" href="index.html">← Volver a la tabla</a>
+  </header>
+  <main class="container">
+    <section class="stats">
+      <article class="stat-card"><span>Canales clasificados</span><strong id="rank-count">0</strong></article>
+      <article class="stat-card"><span>Suscriptores totales</span><strong id="rank-total">0</strong></article>
+      <article class="stat-card"><span>Mayor crecimiento reciente</span><strong id="top-growth">—</strong></article>
+    </section>
+    <section class="panel">
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Puesto</th><th>Canal</th><th>Suscriptores</th><th>Variación desde consulta anterior</th></tr></thead>
+          <tbody id="ranking-body"></tbody>
+        </table>
+      </div>
+      <p id="rank-empty" class="empty">Agrega canales en la página principal para ver el ranking.</p>
+      <p class="notice">La variación compara las dos últimas consultas que hayas guardado para cada canal. Si solo existe una consulta, aparecerá “Sin historial”.</p>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
